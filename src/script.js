@@ -403,15 +403,6 @@ async function deleteItem() {
 }
 
 function connect() {
-    USERNAME = "d";
-    PASSWORD = "314253";
-    SERVER = "localhost";
-    PORT = "";
-    DB = "Test";
-
-    checkConnection();
-    
-    /*
     qS(".server-connect-window").style.display = "block";
 
     qS(".connect").onclick = (e) => {
@@ -425,7 +416,6 @@ function connect() {
 
 	checkConnection();
     }
-    */
 }
 
 function appendDataTypeOptions() {
@@ -495,5 +485,4 @@ function init() {
 
 window.addEventListener("load", () => {
     connect();
-    //init();
 });

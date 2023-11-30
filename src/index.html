@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables</title>
+    <script type="module" src="/script.js" defer></script>
+    <style>
+    </style>
+  </head>
+
+  <body>
+    <div class="tools">
+      <div class="tools-object">
+	<div class="tools-object-short-description"></div>
+      </div>
+      <div class="tools-buttons">
+	
+	<img class="tools-button tools-add-field" src="/icons/add.png" style="opacity: 0">
+	<img class="tools-button tools-add-table" src="/icons/add-table.png">
+	<img class="tools-button tools-sql" src="/icons/sql.png">
+	<img class="tools-button tools-delete" src="/icons/delete.png" style="opacity: 0">
+	<!--
+	    <img class="tools-button tools-change" src="/icons/change.png">
+	    -->
+      </div>
+    </div>
+    
+    <div class="container">
+      <div class="tables">
+	<div class="header">Tables</div>
+	<div class="list"></div>
+      </div>
+      <div class="fields">
+	<div class="header">Fields</div>
+	<div class="list">
+	</div>
+      </div>
+
+    </div>
+
+    <div class="module-window sql-window">
+      <img class="module-window-close sql-window-close" src="/icons/close.png">
+      <div class="sql">
+	<input type="text" class="sql-request-input" placeholder="Your sql request">
+	<div class="sql-output">
+	</div>
+      </div>
+    </div>
+
+    <div class="module-window create-table-window">
+      <img class="module-window-close create-table-window-close" src="/icons/close.png">
+      <div class="module-window-header">Создание таблицы</div>
+      <div class="form">
+	<div class="form-group">
+	  <label for="input-tablename">Название</label>
+	  <input type="text" id="input-tablename" placeholder="Пироги...">
+	</div>
+	<button class="form-send create-table">Создать</button>
+      </div>
+    </div>
+
+    <div class="module-window create-field-window">
+      <img class="module-window-close create-field-window-close" src="/icons/close.png">
+      <div class="module-window-header">Создание поля</div>
+      <div class="form">
+	<div class="form-group">
+	  <label for="input-fieldname">Название</label>
+	  <input type="text" id="input-fieldname" placeholder="Цвет">
+	</div>
+	<div class="form-group">
+	  <label for="input-fieldtype">Тип данных</label>
+	  <select id="input-fieldtype">
+	  </select>
+	</div>
+	<div class="form-group">
+	  <label for="input-fieldnull">NOT NULL</label>
+	  <input type="checkbox" id="input-fieldnull">
+	</div>
+	<div class="form-group">
+	  <label for="input-fieldunique">Уникальность</label>
+	  <input type="checkbox" id="input-fieldunique">
+	</div>
+	<div class="form-group">
+	  <label for="input-fielddefault">Значение по умолчанию</label>
+	  <input type="text" id="input-fielddefault" placeholder="Розовый">
+	</div>
+	<div class="form-group">
+	  <label for="input-fieldprimary">Первичный ключ</label>
+	  <input type="checkbox" id="input-fieldprimary">
+	</div>
+	<button class="form-send create-field">Создать</button>
+      </div>
+    </div>
+
+    <div class="module-window submit-window">
+      <img class="module-window-close create-field-window-close" src="/icons/close.png">
+      <div class="module-window-header">Подтвердите действие</div>
+      <div class="module-window-content">Вы собираетесь удалить это поле.</div>
+      <div class="submit-question">Вы уверены?</div>
+      <div class="form">
+	<button class="form-send submit-action">Да!</button>
+      </div>
+    </div>
+
+    <div class="module-window server-connect-window">
+      <!--<img class="module-window-close server-connect-window-close" src="/icons/close.png">-->
+      <div class="module-window-header">Подключиться к...</div>
+      <div class="form">
+	<div class="form-group">
+	  <label for="input-server">Host</label>
+	  <input type="text" id="input-server" value="localhost">
+	</div>
+	<div class="form-group">
+	  <label for="input-port">Port</label>
+	  <input type="text" id="input-port" value="5342">
+	</div>
+	<div class="form-group">
+	  <label for="input-table">БД</label>
+	  <input type="text" id="input-table">
+	</div>
+	<div class="form-group">
+	  <label for="input-username">Username</label>
+	  <input type="text" id="input-username">
+	</div>
+	<div class="form-group">
+	  <label for="input-password">Пароль</label>
+	  <input type="password" id="input-password">
+	</div>
+	<button class="form-send connect">Подключиться</button>
+      </div>
+    </div>
+
+    <div class="message-container">
+    </div>
+  </body>
+</html>

@@ -1,0 +1,333 @@
+@font-face {
+    font-family: ubuntuFont;
+    src: url(/fonts/UbuntuMono-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    
+    font-family: ubuntuFont;
+
+    user-select: none;
+}
+
+.container {
+    margin: 0 auto;
+    margin-top: 10px;
+    
+    width: 800px;
+    height: 550px;
+
+    display: flex;
+    flex-direction: row;
+
+    gap: 20px;
+}
+
+.container > div {
+    /*box-shadow: 0 0 1px 0;*/
+    flex: 1;
+    height: 100%;
+    
+    overflow: auto;
+}
+
+.tables {
+    max-width: 250px;
+}
+
+.header {
+    font-size: 20px;
+}
+
+.list {
+    margin-top: 20px;
+
+    font-size: 16px;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.list-el {
+    color: rgb(100,100,100);
+    
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+
+    cursor: pointer;
+}
+
+.list-el-point {
+    width: 100px;
+
+    text-decoration: underline;
+}
+.list-el-point:first-child {
+    text-decoration: none;
+}
+
+.sql-request-input {
+    padding: 10px;
+    width: 100%;
+
+    box-sizing: border-box;
+}
+
+.sql-output {
+    padding: 10px 0;
+    width: 100%;
+    max-width: 100%;
+    height: 475px;
+
+    box-sizing: border-box;
+    
+    overflow: auto;
+}
+
+.sql-output-row {
+    padding: 5px 0;
+
+    box-sizing: border-box;
+    box-shadow: 0 1px 0 0 rgb(200,200,200);
+    
+    display: flex;
+    flex-direction: row;
+}
+
+.sql-output-column {
+    text-align: center;
+    
+    flex: 1;
+}
+.sql-output-column:first-child {
+    max-width: 50px;
+}
+
+.sql-output-name-fields {
+    font-weight: bold;
+}
+
+.module-window {
+    position: fixed;
+    padding: 10px;
+
+
+    box-sizing: border-box;
+    box-shadow: 0 0 1px 0;
+
+    background: white;
+
+    display: none;
+}
+
+.module-window-header {
+    font-size: 25px;
+}
+
+.module-window-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    width: 20px;
+
+    cursor: pointer;
+}
+
+.form {
+    margin-top: 20px;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-group {
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.form-group > * {
+    flex: 1;
+}
+
+.form-group label {
+    width: 100px;
+    max-width: 100px;
+}
+
+.form-group input {
+    padding: 5px;
+    
+    box-sizing: border-box;
+}
+
+.form-send {
+    padding: 10px;
+
+    box-sizing: border-box;
+
+    cursor: pointer;
+}
+
+.server-connect-window {
+    top: calc(40% - 150px);
+    left: calc(50% - 150px);
+    width: 300px;
+    height: 300px;
+}
+
+.sql-window {
+    top: 0;
+    top: calc(50% - 264px);
+    left: calc(50% - 350px);
+    padding-top: 35px;
+
+    width: 700px;
+    height: 550px;
+
+    display: none;
+}
+
+.tools {
+    width: 100%;
+    height: 35px;
+
+    box-shadow: 0 1px 2px 0 rgb(200,200,200);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.tools-object {
+    width: 400px;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    gap: 20px;
+}
+
+.tools-object-type:after {
+    content: ':';
+}
+
+.tools-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+}
+
+.tools-buttons img {
+    padding: 2px;
+    
+    width: 25px;
+
+    cursor: pointer;
+}
+.tools-buttons img:hover {
+    box-shadow: 0 0 .5px 0;
+}
+
+.message-container {
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.message {
+    padding: 10px;
+    
+    width: 250px;
+
+    border-radius: 5px;
+
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/*
+.message-show {
+    animation: message-show-animation 5s one-shot;
+}
+
+@keyframes message-show-animation {
+    20% {
+	opacity: 1;
+    }
+    100% {
+	opacity: 1;
+    }
+}
+*/
+
+.message-title {
+    font-size: 14.5px;
+}
+
+.message-content {
+    font-size: 13px;
+}
+
+.message-success {
+    background: rgba(177, 255, 177, .8);
+}
+
+.message-error {
+    background: rgba(255, 157, 157, .8);
+}
+
+
+.create-table-window {
+    top: calc(40% - 75px);
+    left: calc(50% - 150px);
+    
+    width: 300px;
+    height: 150px;
+}
+
+.create-field-window {
+    top: calc(40% - 200px);
+    left: calc(50% - 175px);
+    
+    width: 350px;
+    height: 320px;
+}
+
+.submit-window {
+    top: calc(40% - 75px);
+    left: calc(50% - 150px);
+    
+    width: 320px;
+    
+    max-height: 200px;
+}
+
+.module-window-content {
+    margin-top: 15px;
+    text-align: justify;
+}
+
+.submit-question {
+    margin-top: 5px;
+    
+    font-weight: bold;
+    color: rgb(150, 0, 0);
+}

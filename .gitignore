@@ -24,4 +24,4 @@ dist-ssr
 *.sw?
 *~
 *#
-src-tauri/icons*
+*src-tauri/icons*
